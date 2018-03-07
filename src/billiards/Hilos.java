@@ -6,7 +6,7 @@ public class Hilos implements Runnable{
 	private Ball ball;
 	private Board board;
 
-	 Hilos(Ball ball, Board board) {
+	Hilos(Ball ball, Board board) {
 		this.ball = ball;
 		this.board = board;
 	}
@@ -14,5 +14,9 @@ public class Hilos implements Runnable{
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
+		do {
+			ball.move();
+			board.repaint();
+		}while(ball.getdr()>0);
 	}
 }
