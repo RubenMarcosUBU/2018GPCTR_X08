@@ -18,8 +18,8 @@ public class Ball {
 		
 		//TODO Depend of image size
 		//DONE
-		IMG_TAM_X = 256;
-		IMG_TAM_Y = 256;
+		IMG_TAM_X = 32;
+		IMG_TAM_Y = 32;
 
 		
 		x = Billiards.Width/4-16;

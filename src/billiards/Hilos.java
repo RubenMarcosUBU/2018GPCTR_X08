@@ -1,7 +1,7 @@
 package billiards;
 
 
-public class Hilos implements Runnable{
+public class Hilos extends Thread{
 	
 	private Ball ball;
 	private Board board;
@@ -14,9 +14,17 @@ public class Hilos implements Runnable{
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		do {
-			ball.move();
-			board.repaint();
-		}while(ball.getdr()>0);
+		while(Billiards.running) {
+			
+			try {
+				ball.move();
+				board.repaint();
+				Thread.sleep(10);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				//e.printStackTrace();
+				System.err.println("Sleeping Thread Interrupted");
+			}
+		}
 	}
 }
