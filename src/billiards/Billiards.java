@@ -69,6 +69,7 @@ public class Billiards extends JFrame {
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
 			// TODO Code is executed when start button is pushed
+			// DONE
 			if(hilos== null){
 				for (int i = 0; i < N_BALL; i++) {
 					hilos= new Hilos(balls[i],board);

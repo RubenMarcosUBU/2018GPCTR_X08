@@ -17,8 +17,9 @@ public class Ball {
 		image = ii.getImage();
 		
 		//TODO Depend of image size
-		IMG_TAM_X = 32;
-		IMG_TAM_Y = 32;
+		//DONE
+		IMG_TAM_X = 256;
+		IMG_TAM_Y = 256;
 
 		
 		x = Billiards.Width/4-16;
@@ -41,6 +42,8 @@ public class Ball {
 		reflect();
 		
 		//TODO Check postcondition
+		//DONE
+		assert x>Board.TOPBOARD && x<Board.BOTTOMBOARD && y>Board.LEFTBOARD && y<Board.RIGHTBOARD:"La bola se ha salido del tablero";
 	}
 
 	private void reflect() {
