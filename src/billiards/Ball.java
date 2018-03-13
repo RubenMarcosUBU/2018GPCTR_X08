@@ -5,7 +5,7 @@ import javax.swing.ImageIcon;
 //TODO Transform the code to be used safely in a concurrent context.  
 public class Ball {
        //TODO  Find an archive named Ball.png 
-	private String Ball = "Ball.png"; 
+	//private String Ball = "Ball.png"; 
 
 	private double x,y,dx,dy;
 	private double v,fi;
@@ -13,7 +13,7 @@ public class Ball {
 	private final int IMG_TAM_X,IMG_TAM_Y;
 
 	public Ball() {
-		ImageIcon ii = new ImageIcon(this.getClass().getResource(Ball));
+		ImageIcon ii = new ImageIcon(this.getClass().getResource("/resources/ball.png"));
 		image = ii.getImage();
 		
 		//TODO Depend of image size
